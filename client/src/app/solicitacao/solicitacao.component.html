@@ -1,0 +1,13 @@
+<app-menu-superior></app-menu-superior>
+<div *ngFor='let solicitacao of solicitacoes'>
+    <form novalidate (ngSubmit)="responderSolicitacaoAmizade()" [formGroup]="solicitacaoForm">
+        <div class="form-group">
+            <a [routerLink]="['/perfil/', solicitacao.usuarioId]"> <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{solicitacao.usuarioId}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" width="100" height="150" />{{ solicitacao.nome}}</a>
+            <div class="col-md-4 col-md-offset-2">
+                <button class="btn btn-success" [value]="true" type="submit">Aceitar</button>
+                <button class="btn btn-danger" [value]="false" type="submit">Excluir</button>
+            </div>
+            <hr>
+        </div>
+    </form>
+</div>

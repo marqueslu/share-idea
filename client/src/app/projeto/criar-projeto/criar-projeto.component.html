@@ -1,0 +1,96 @@
+<app-menu-superior></app-menu-superior>
+
+<div class="container" style="margin-bottom: 100px">
+    <div class="row">
+        <button style="margin-bottom: 20px; margin-left: 16px" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                        Dicas
+                    </button>
+    </div>
+    <div class="row">
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Dicas para criação do seu projeto:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <strong>Descrição:</strong> Um resumo breve e convidativo sobre seu projeto.
+                        <br>
+                        <br>
+
+                        <strong>Foto:</strong> Todo o projeto deve ter uma imagem de capa que expresse seu verdadeiro propósito.
+                        <br>
+                        <br>
+
+                        <strong>Conteudo: </strong> Deve conter toda a história e informação sobre o projeto. Tente utilizar o máximo possível de imagens e vídeos para que seu projeto seja o mais atrativo.
+
+                        <br>
+                        <br>
+                        <strong>Criar Projeto:</strong> Após seu projeto ser finalizado, basta clicar no botão ‘Criar Projeto’ para que seu projeto seja criado. Para visualizar ou editar clique no menu ‘Meus Projetos’.
+                        <br>
+                        <br>
+                        <strong>Salvar Rascunho:</strong> Você também pode salvar o seu projeto sem publicá-lo, basta clicar no botão ‘Salvar Rascunho’, assim vai poder dar continuidade ao seu projeto em outro momento.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+
+    <form novalidate (ngSubmit)="criarProjeto()" [formGroup]="projetoForm">
+        <div class="form-horizontal">
+
+            <div class="form-group" [ngClass]="{'has-error': displayMessage.titulo }">
+
+                <div class="col-md-3">
+
+                    <input class="form-control" id="titulo" type="text" placeholder="Titulo" formControlName="titulo" required />
+
+                    <span class="text-danger" *ngIf="displayMessage.titulo">
+                        <p [innerHTML]="displayMessage.titulo"></p>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="form-group" [ngClass]="{'has-error': displayMessage.descCurta }">
+                <div class="col-md-6">
+                    <textarea style="resize: none; height: 200px;" class="form-control" id="descCurta" type="text" placeholder="Descrição curta" formControlName="descCurta" required></textarea>
+                    <span class="text-danger" *ngIf="displayMessage.descCurta">
+                        <p [innerHTML]="displayMessage.descCurta"></p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group" [ngClass]="{'has-error': displayMessage.nome }">
+                <div class="col-md-3">
+                    <!-- <input class="form-control" (change)="uploadFoto($event)" id="fotoProjeto" type="file" /> -->
+                    <input class="form-control" id="fotoProjeto" type="file" formControlName="fotoProjeto" />
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea ',
+                    plugins: 'media mediaembed',
+                    mediaembed_service_url: 'SERVICE_URL',
+                    mediaembed_max_width: 450}" class="col-md-12" formControlName="conteudo">
+                </editor>
+            </div>
+
+            <button class="btn btn-success btn-lg col-md-2" style="margin-right: 20px">Criar Projeto</button>
+
+            <button class="btn btn-info btn-lg col-md-2">Salvar Rascunho</button>
+        </div>
+    </form>
+</div>

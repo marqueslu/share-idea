@@ -1,0 +1,34 @@
+<app-menu-superior></app-menu-superior>
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 *ngIf="resultados == 0" class="section-title h1">Nenhum resultado encontrado para '{{nome}}'</h5>
+        <h5 *ngIf="resultados != 0" class="section-title h1">Resultados encontrado para '{{nome}}'</h5>
+
+        <div class="row">
+            <!-- Team member -->
+
+            <div *ngFor='let perfil of resultados' style="background-color:darkgrey">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <a [routerLink]="['/perfil/', perfil.id]">
+                                            <p>
+                                                <img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{perfil.id}}?alt=media&token=cca15944-7daa-42e2-a7fc-84c0da1c25d6"
+                                                    alt="card image">
+                                            </p>
+                                            <h4 class="card-title">{{perfil.nome}} {{perfil.sobrenome}}</h4>
+                                        </a>
+                                        <p class="card-text">Microsoft MVP | Software Engineer</p>
+                                        <a href="#" class="btn btn-primary btn-sm">Seguir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

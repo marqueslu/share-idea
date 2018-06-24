@@ -1,0 +1,423 @@
+.perfil-cabecalo {
+    margin: auto;
+    background: cornsilk;
+    height: 300px;
+    padding: 20px;
+}
+
+.perfil-imagem {
+    display: table-cell;
+    float: left;
+}
+
+.perfil-texto {
+    display: table-cell;
+    width: 300px;
+    margin-top: -20;
+    padding-left: 20px;
+}
+
+article {
+    margin: auto;
+    width: 70%;
+    padding-top: 40px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*-------------------*/
+
+.profile-page .user-info {
+    text-align: center;
+    background: #f3f3f3;
+    padding: 2rem 0 1rem 0;
+    margin-top: -20px;
+}
+
+.profile-page .user-info .user-img {
+    /* width: 150px; */
+    height: 150px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.profile-page .user-info h4 {
+    font-weight: 700;
+}
+
+.profile-page .user-info p {
+    margin: 0 auto 0.5rem auto;
+    color: #aaa;
+    max-width: 450px;
+    font-weight: 300;
+}
+
+.profile-page .user-info .action-btn {
+    float: right;
+    color: #999;
+    border: 1px solid #999;
+}
+
+.profile-page .articles-toggle {
+    margin: 1.5rem 0 -1px 0;
+}
+
+.btn-outline-secondary {
+    color: #ccc;
+    background-image: none;
+    background-color: transparent;
+    border-color: #ccc;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.btn-outline-secondary:focus,
+.btn-outline-secondary.focus {
+    color: #fff;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.btn-outline-secondary:active,
+.btn-outline-secondary.active,
+.open>.btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.btn-outline-secondary:active:hover,
+.btn-outline-secondary:active:focus,
+.btn-outline-secondary:active.focus,
+.btn-outline-secondary.active:hover,
+.btn-outline-secondary.active:focus,
+.btn-outline-secondary.active.focus,
+.open>.btn-outline-secondary.dropdown-toggle:hover,
+.open>.btn-outline-secondary.dropdown-toggle:focus,
+.open>.btn-outline-secondary.dropdown-toggle.focus {
+    color: #fff;
+    background-color: #a1a1a1;
+    border-color: #8c8c8c;
+}
+
+.btn-outline-secondary.disabled:focus,
+.btn-outline-secondary.disabled.focus,
+.btn-outline-secondary:disabled:focus,
+.btn-outline-secondary:disabled.focus {
+    border-color: white;
+}
+
+.btn-outline-secondary.disabled:hover,
+.btn-outline-secondary:disabled:hover {
+    border-color: white;
+}
+
+.btn-secondary {
+    color: #373a3c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-secondary:hover {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.btn-secondary:active,
+.btn-secondary.active,
+.open>.btn-secondary.dropdown-toggle {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    background-image: none;
+}
+
+.btn-secondary:active:hover,
+.btn-secondary:active:focus,
+.btn-secondary:active.focus,
+.btn-secondary.active:hover,
+.btn-secondary.active:focus,
+.btn-secondary.active.focus,
+.open>.btn-secondary.dropdown-toggle:hover,
+.open>.btn-secondary.dropdown-toggle:focus,
+.open>.btn-secondary.dropdown-toggle.focus {
+    color: #373a3c;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+
+.btn-secondary.disabled:focus,
+.btn-secondary.disabled.focus,
+.btn-secondary:disabled:focus,
+.btn-secondary:disabled.focus {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-secondary.disabled:hover,
+.btn-secondary:disabled:hover {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.postagem {
+    margin-bottom: 10px;
+}
+
+
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+
+/* Tabs panel */
+
+.tabbable-panel {
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+
+/* Default mode */
+
+.tabbable-line>.nav-tabs {
+    border: none;
+    margin: 0px;
+}
+
+.tabbable-line>.nav-tabs>li {
+    margin-right: 2px;
+}
+
+.tabbable-line>.nav-tabs>li>a {
+    border: 0;
+    margin-right: 0;
+    color: #737373;
+}
+
+.tabbable-line>.nav-tabs>li>a>i {
+    color: #a6a6a6;
+}
+
+.tabbable-line>.nav-tabs>li.open,
+.tabbable-line>.nav-tabs>li:hover {
+    border-bottom: 4px solid rgb(156, 131, 253);
+}
+
+.tabbable-line>.nav-tabs>li.open>a,
+.tabbable-line>.nav-tabs>li:hover>a {
+    border: 0;
+    background: none !important;
+    color: #333333;
+}
+
+.tabbable-line>.nav-tabs>li.open>a>i,
+.tabbable-line>.nav-tabs>li:hover>a>i {
+    color: #a6a6a6;
+}
+
+.tabbable-line>.nav-tabs>li.open .dropdown-menu,
+.tabbable-line>.nav-tabs>li:hover .dropdown-menu {
+    margin-top: 0px;
+}
+
+.tabbable-line>.nav-tabs>li.active {
+    border-bottom: 4px solid #663FFB;
+    position: relative;
+}
+
+.tabbable-line>.nav-tabs>li.active>a {
+    border: 0;
+    color: #333333;
+}
+
+.tabbable-line>.nav-tabs>li.active>a>i {
+    color: #404040;
+}
+
+.tabbable-line>.tab-content {
+    margin-top: -3px;
+    background-color: #fff;
+    border: 0;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.portlet .tabbable-line>.tab-content {
+    padding-bottom: 0;
+}
+
+
+/* Below tabs mode */
+
+.tabbable-line.tabs-below>.nav-tabs>li {
+    border-top: 4px solid transparent;
+}
+
+.tabbable-line.tabs-below>.nav-tabs>li>a {
+    margin-top: 0;
+}
+
+.tabbable-line.tabs-below>.nav-tabs>li:hover {
+    border-bottom: 0;
+    border-top: 4px solid rgb(156, 131, 253);
+}
+
+.tabbable-line.tabs-below>.nav-tabs>li.active {
+    margin-bottom: -2px;
+    border-bottom: 0;
+    border-top: 4px solid #663FFB;
+}
+
+.tabbable-line.tabs-below>.tab-content {
+    margin-top: -10px;
+    border-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+
+/**** BASE ****/
+
+body {
+    color: #888;
+}
+
+a {
+    color: #03a1d1;
+    text-decoration: none!important;
+}
+
+
+/**** LAYOUT ****/
+
+.list-inline>li {
+    padding: 0 10px 0 0;
+}
+
+
+/**** MODULE ****/
+
+.bgc-fff {
+    background-color: #fff!important;
+}
+
+.box-shad {
+    -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.brdr {
+    border: 1px solid #ededed;
+}
+
+
+/* Font changes */
+
+.fnt-smaller {
+    font-size: .9em;
+}
+
+.fnt-lighter {
+    color: #bbb;
+}
+
+
+/* Padding - Margins */
+
+.pad-10 {
+    padding: 10px!important;
+}
+
+.mrg-0 {
+    margin: 0!important;
+}
+
+.btm-mrg-10 {
+    margin-bottom: 10px!important;
+}
+
+.btm-mrg-20 {
+    margin-bottom: 20px!important;
+}
+
+
+/* Color  */
+
+.clr-535353 {
+    color: #535353;
+}
+
+
+/**** MEDIA QUERIES ****/
+
+@media only screen and (max-width: 991px) {
+    #property-listings .property-listing {
+        padding: 5px!important;
+    }
+    #property-listings .property-listing a {
+        margin: 0;
+    }
+    #property-listings .property-listing .media-body {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #property-listings .property-listing img {
+        max-width: 300px;
+    }
+}
+
+.post-footer-option {
+    padding: 5px;
+    margin-left: 400px;
+}
+
+.post-footer-option li {
+    float: left;
+    margin-right: 50px;
+    padding-bottom: 15px;
+}
+
+.post-footer-option li a {
+    color: #5b9bd1;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.photo-profile {
+    border: 1px solid #DDD;
+}
+
+.anchor-username h4 {
+    font-weight: bold;
+}
+
+.anchor-time {
+    color: #ADB2BB;
+    font-size: 1.2rem;
+}
+
+.post-footer-comment-wrapper {
+    background-color: #F6F7F8;
+}

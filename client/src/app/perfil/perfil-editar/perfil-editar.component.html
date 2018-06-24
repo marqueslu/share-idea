@@ -1,0 +1,176 @@
+<app-menu-superior></app-menu-superior>
+<div class="container main-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="title">
+                <h1>Editar Perfil</h1>
+            </div>
+            <form class="formulario" novalidate (ngSubmit)="atualizarPerfil()" [formGroup]="editarForm">
+
+                <div class="form-horizontal">
+
+                    <div class="alert alert-danger" *ngIf="errors.length > 0">
+                        <h3 id="msgRetorno">Opa! Alguma coisa não deu certo:</h3>
+                        <ul>
+                            <li *ngFor="let error of errors">{{ error }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+
+                            <div class="imagem col-md-10">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{perfilId}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" width="150" height="200" />
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.foto }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="foto" (change)="uploadFoto($event)" id="fotoPerfil" type="file" formControlName="foto" />
+
+                                <span class="text-danger" *ngIf="displayMessage.foto">
+                                    <p [innerHTML]="displayMessage.foto"></p>
+                                </span>
+                                <div class="bio">
+                                    <h3>Bio:</h3>
+                                    <h5>{{ sobre }}</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.nome }">
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.nome }">
+                                <div class="col-md-12">
+                                    <input class="form-control" id="nome" type="text" placeholder="Nome" formControlName="nome" />
+
+                                    <span class="text-danger" *ngIf="displayMessage.nome">
+                                        <p [innerHTML]="displayMessage.nome"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.sobrenome }">
+                                <div class="col-md-12">
+                                    <input class="form-control" id="sobrenome" type="text" placeholder="Sobrenome" formControlName="sobrenome" />
+                                    <span class="text-danger" *ngIf="displayMessage.sobrenome">
+                                        <p [innerHTML]="displayMessage.sobrenome"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.username }">
+                                <div class="col-md-12">
+                                    <input class="form-control" id="username" type="text" placeholder="Username" formControlName="username" />
+                                    <span class="text-danger" *ngIf="displayMessage.username">
+                                        <p [innerHTML]="displayMessage.username"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.sobre }">
+                                <div class="col-md-12">
+                                    <input class="form-control desc-sobre" id="sobre" type="text" placeholder="Sobre você" formControlName="sobre" [(ngModel)]="sobre" />
+                                    <span class="text-danger" *ngIf="displayMessage.sobre">
+                                        <p [innerHTML]="displayMessage.sobre"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.dataNascimento }">
+                                <div class="col-md-12">
+                                    <input class="form-control col-md-5" id="dataNascimento" type="text" placeholder="Data de nascimento" formControlName="dataNascimento" />
+
+                                    <span class="text-danger" *ngIf="displayMessage.dataNascimento">
+                                        <p [innerHTML]="displayMessage.dataNascimento"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.profissao }">
+                                <div class="col-md-12">
+                                    <select class="form-control col-md-5" id="profissao" type="text" formControlName="profissao">
+                                        <option selected="selected">Profissão</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                        <option>Desenvolvedor</option>
+                                        <option>Empreendedor</option>
+                                        <option>Dona de Casa</option>
+                                    </select>
+                                    <span class="text-danger" *ngIf="displayMessage.profissao">
+                                        <p [innerHTML]="displayMessage.profissao"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" [ngClass]="{'has-error': displayMessage.genero }">
+                                <div class="col-md-12">
+                                    <select class="form-control col-md-5" id="genero" type="text" formControlName="genero">
+                                        <option selected>Gênero</option>
+                                        <option>Masculino</option>
+                                        <option>Feminino</option>
+                                        <option>Não informar</option>
+                                    </select>
+                                    <span class="text-danger" *ngIf="displayMessage.genero">
+                                        <p [innerHTML]="displayMessage.genero"></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <span>
+                                        <button class="btn col-md-12" id="Atualizar" type="submit" [disabled]='!editarForm.valid'>Salvar</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

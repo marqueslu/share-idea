@@ -1,0 +1,24 @@
+<app-menu-superior></app-menu-superior>
+<div class="container main-container">
+    <h1 style="margin-bottom: 40px; color:gray">{{projeto.titulo}} <button style=" float:right" type="button" class="btn btn-success btn-lg">Quero Participar</button>
+    </h1>
+    <hr>
+    <div [innerHTML]='projeto.conteudo'></div>
+    <hr>
+
+    <h1 style="color:gray">Comentários:</h1>
+
+    <div class="alert alert-info" role="alert">
+        <strong>Tire suas dúvidas e seja gentil:)</strong>
+    </div>
+
+    <div class="form-group">
+
+        <textarea style="resize: none;height: 100px;" class="form-control" type="text"></textarea>
+
+    </div>
+
+
+    <button class="btn btn-success" style="margin-bottom: 100px;">Comentar</button>
+
+</div>

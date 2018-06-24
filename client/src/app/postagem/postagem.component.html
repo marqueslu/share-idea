@@ -1,0 +1,44 @@
+<div *ngFor='let postagem of postagens' class="postagens">
+
+    <div class="card">
+        <div class="card-block">
+            <p class="card-text" [innerHTML]='postagem.conteudo'></p>
+            <!-- <div class="postagem-conteudo" [innerHTML]='postagem.conteudo'> -->
+            <!-- {{postagem.conteudo}} -->
+            <!-- </p> -->
+        </div>
+        <div class="card-footer article-actions">
+
+            <p style="float:right">{{postagem.dataPostagem | date: 'dd/MM/yyyy'}}</p>
+            <p>
+                <a (click)='editar(postagem)' class="btn btn-sm btn-outline-secondary" *ngIf="id == perfilId">
+                    <i class="ion-edit"></i>Editar</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- <div class="postagem">
+    <div class="postagem-conteudo" [innerHTML]='postagem.conteudo'>
+    </div>
+    <div>
+        <hr>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-2">
+                Hora: {{ postagem.dataPostagem | date:'dd/MM/yyyy - hh:mm' }}
+        </div>
+        <div class="col-sm-4 col-sm-offset-2">
+                <figure>
+                        <img src="../../assets/like.png" width="20px" height="18px">
+                        {{ postagem.curtidas}}
+                    </figure>
+        </div>
+    </div>
+    </div>
+    <p>{{ postagem.editado ? "(EDITADO)": ""}}</p>
+    <p><a>ver mais..</a></p>
+    <p>
+        <a [routerLink]="['/postagem-editar/', postagem.id]" class="btn btn-sm btn-outline-secondary"><i class="ion-edit"></i>Editar</a></p>
+    </div>
+    <br/>
+
+</div> -->

@@ -1,0 +1,24 @@
+.form-control {
+    width: 100%;
+    resize: none;
+    margin: 10px 15px 5px 5px;
+  }
+
+  input, select, textarea {
+    max-width: 800px;
+}
+
+.modal-header{
+	background: mediumslateblue;
+    border-bottom-style: groove;
+}
+
+.modal-footer{
+    border-top-style: double;
+    text-align: center; 
+}
+
+.btn {
+    width: 30%;
+}
+

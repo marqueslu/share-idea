@@ -1,0 +1,67 @@
+.container-fluid{
+
+}
+
+/* .ng-valid[required], .ng-valid.required  {
+  border-left: 2px solid #42A948; /* green */
+/* }
+
+.ng-invalid:not(form)  {
+  border-left: 2px solid #a94442; /* red */
+/* }s */
+/* .row{
+    background-color: #676CFB;
+} */ 
+.container-input h1{
+    color: #676CFB;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.container-input{
+    background-color: white;
+    height: 100vh;
+}
+
+.info-container{
+    Color: white;
+    background-color: #663FFB;
+    height: 100vh;
+}
+
+.info-container h1{
+    margin-bottom: 10em;
+}
+.button-login a{
+    float: right;
+    border: 2px solid #676CFB;
+    padding: 5px 15px 5px 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #676CFB;
+}
+.button-login a:hover{
+    background-color: #676CFB;
+    color: white;
+    text-decoration: none;
+}
+.info-container i{
+    margin-top: 10px;
+}
+.form-login{
+    margin-left: 100px;
+    margin-top: 350px;
+}
+.material-icons{
+    padding-right: 20px;
+}
+/*
+.info-container h3{
+    padding-bottom: 5em;
+} */
+
+input,
+select,
+textarea, .btn {
+    max-width: 60%;
+}

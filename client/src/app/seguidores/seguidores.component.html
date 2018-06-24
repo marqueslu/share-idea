@@ -1,0 +1,26 @@
+<app-menu-superior></app-menu-superior>
+<section id="team" class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div *ngFor='let seguidor of seguidores' style="background-color:darkgrey">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <a [routerLink]="['/perfil/', seguidor.usuarioId]">
+                                            <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{seguidor.usuarioId}}?alt=media&token=cca15944-7daa-42e2-a7fc-84c0da1c25d6" alt="card image"></p>
+                                            <h4 class="card-title">{{seguidor.nome}} {{seguidor.sobrenome}}</h4>
+                                        </a>
+                                        <p class="card-text">{{seguidor.profissao}}</p>
+                                        <a href="#" class="btn btn-primary btn-sm">Seguir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

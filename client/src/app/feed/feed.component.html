@@ -1,0 +1,78 @@
+<app-menu-superior></app-menu-superior>
+<div class="container main-container">
+    <div class="row">
+        <div class="container">
+            <div class="row profile">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <!-- SIDEBAR USERPIC -->
+                        <a [routerLink]="['/perfil/', perfil.id]">
+                            <div class="profile-userpic">
+                                <img style="margin-top: 10px;" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{user.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" class="img-responsive" alt="">
+                            </div>
+                            <!-- END SIDEBAR USERPIC -->
+                            <!-- SIDEBAR USER TITLE -->
+                            <div class="profile-usertitle">
+                                <div class="profile-usertitle-name">
+                                    {{perfil.nome}} {{perfil.sobrenome}}
+                                </div>
+                                <div class="profile-usertitle-job">
+                                    {{perfil.profissao}}
+                                </div>
+                            </div>
+                        </a>
+                        <hr/>
+                        <p>Postagens
+                            <strong>{{postagensUsuario.length}}</strong></p>
+                        <hr/>
+                        <p>Projetos: <strong>{{projetosUsuario.length}}</strong></p>
+                        <hr/>
+                        <p>Seguidores: <strong>{{seguidoresUsuario.length}}</strong></p>
+
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="profile-content">
+                        <app-postagem-criar></app-postagem-criar>
+                        <div *ngFor='let postagem of postagens'>
+                            <div class="feed-noticias" style="margin-bottom: 10px; margin-top:10px;">
+                                <div class="feed-noticias-postagens ">
+                                    <a [routerLink]="[ '/perfil/', postagem.usuarioId] ">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{postagem.usuarioId}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1 " />
+                                        <b>{{postagem.nome}} {{postagem.sobrenome}}</b>
+                                        <br>
+                                        <br>
+                                        <span> {{postagem.profissao}}</span>
+                                    </a>
+                                    <div id="postagem-conteudo" [innerHTML]='postagem.conteudo'>
+                                    </div>
+
+                                </div>
+                                <div class="postagem-acoes">
+
+                                    <div class="post-footer-option">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a>
+                                                    <i class="glyphicon glyphicon-thumbs-up"></i> Curtir</a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="glyphicon glyphicon-comment"></i> Comentar</a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <i class="glyphicon glyphicon-share-alt"></i> Compartilhar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

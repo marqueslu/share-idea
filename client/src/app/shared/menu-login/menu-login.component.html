@@ -1,0 +1,17 @@
+<ul [ngSwitch]="usuarioLogado()" class="nav navbar-nav navbar-right">
+    <li *ngSwitchCase="false">
+        <a [routerLink]="[ '/cadastro']">
+            <span class="glyphicon glyphicon-user"></span> Cadastro</a>
+    </li>
+    <li *ngSwitchCase="false">
+        <a [routerLink]="[ '/login']">
+            <span class="glyphicon glyphicon-log-in"></span> Entrar</a>
+    </li>
+    <li *ngSwitchCase="true">
+        <app-busca></app-busca>
+    </li>
+    <li *ngSwitchCase="true">
+        <a href="javascript:void{0}" (click)="logout()" class="menu-sair">
+            <span class="glyphicon glyphicon-off"></span> Sair</a>
+    </li>
+</ul>

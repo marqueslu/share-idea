@@ -1,0 +1,19 @@
+<div class="form-post">
+    <form novalidate (ngSubmit)="criarPostagem()" [formGroup]="postagemForm">
+
+        <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea',
+        menubar: false,
+        toolbar: false,
+        branding: false}" formControlName="conteudo"  [(ngModel)]='editor'>
+        </editor>
+
+        <!-- <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea ',
+        plugins: 'media mediaembed',
+        mediaembed_service_url: 'SERVICE_URL',
+        mediaembed_max_width: 450}" formControlName="conteudo">
+        </editor> -->
+        <button class="btn btn-primary col-md-3" id="criar" type="submit" [disabled]='!postagemForm.valid'>Postar</button>
+
+
+    </form>
+</div>

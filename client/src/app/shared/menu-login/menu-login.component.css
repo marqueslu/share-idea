@@ -1,0 +1,15 @@
+.navbar-right li a {
+    color: #fff;
+}
+
+.navbar-right li a :hover{
+    color: #333;
+}
+
+.menu-sair:hover{
+    color: #333;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    color: #333;
+} 

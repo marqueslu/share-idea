@@ -1,0 +1,110 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 info-container">
+            <div class="col-md-offset-1">
+                <h1>RedeSocial</h1>
+                <h3>
+                    <i class="material-icons">monetization_on</i>Conecte-se com investidores.</h3>
+                <h3>
+                    <i class="material-icons">people_outline</i>Faça novas amizades.</h3>
+                <h3>
+                    <i class="material-icons">lightbulb_outline</i>Busque inspirações para as duas ideias.</h3>
+            </div>
+        </div>
+        <div class="col-md-6 container-input">
+            <div class="button-login">
+                <a [routerLink]="[ '/login']">LOGIN</a>
+            </div>
+            <div class="form-login">
+                <h1>Compartilhe suas ideias!</h1>
+                <form novalidate (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
+                    <div class="form-horizontal">
+
+                        <div class="alert alert-danger col-md-6" *ngIf="errors.length > 0">
+                            <h4 id="msgRetorno">Opa! Alguma coisa não deu certo:</h4>
+                            <ul>
+                                <li *ngFor="let error of errors">{{ error }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.nome }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="nome" type="text" placeholder="Nome" formControlName="nome" required />
+
+                                <span class="text-danger" *ngIf="displayMessage.nome">
+                                    <p [innerHTML]="displayMessage.nome"></p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.sobrenome }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="sobrenome" type="text" placeholder="Sobrenome" formControlName="sobrenome" required/>
+                                <span class="text-danger" *ngIf="displayMessage.sobrenome">
+                                    <p [innerHTML]="displayMessage.sobrenome"></p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.cpf }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="username" type="text" placeholder="Username" formControlName="username" required/>
+
+                                <span class="text-danger" *ngIf="displayMessage.username">
+                                    <p [innerHTML]="displayMessage.username"></p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.email }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="email" type="text" placeholder="E-mail" formControlName="email" required/>
+
+                                <span class="text-danger" *ngIf="displayMessage.email">
+                                    <p [innerHTML]="displayMessage.email"></p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.dataNascimento }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="dataNascimento" type="text" placeholder="Data de nascimento" formControlName="dataNascimento" required/>
+
+                                <span class="text-danger" *ngIf="displayMessage.dataNascimento">
+                                    <p [innerHTML]="displayMessage.dataNascimento"></p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.senha }">
+                            <div class="col-md-10">
+                                <input class="form-control" id="senha" type="password" placeholder="senha" formControlName="senha" required/>
+
+                                <span class="text-danger" *ngIf="displayMessage.senha">
+                                    <p [innerHTML]="displayMessage.senha"></p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" [ngClass]="{'has-error': displayMessage.senhaConfirmacao }">
+                            <div class="col-md-10">
+                                <input class="col-md-8 form-control" id="senhaConfirmacao" type="password" placeholder="Confirmacao senha" formControlName="senhaConfirmacao" required/>
+
+                                <span class="text-danger" *ngIf="displayMessage.senhaConfirmacao">
+                                    <p [innerHTML]="displayMessage.senhaConfirmacao"></p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <span>
+                                    <button class="btn btn-default col-md-8" id="Registrar" type="submit" [disabled]='!cadastroForm.valid'>Criar</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

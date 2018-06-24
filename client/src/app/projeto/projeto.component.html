@@ -1,0 +1,77 @@
+<app-menu-superior></app-menu-superior>
+<div class="container main-container">
+    <div class="row">
+        <button [routerLink]="['/projeto-criar']" type="button" class="btn btn-success btn-lg">Criar um Projeto</button>
+
+        <hr>
+    </div>
+
+    <div class="row">
+
+        <div *ngFor='let projeto of projetos'>
+
+
+            <!-- <a [routerLink]="['/projeto-detalhes/', projeto.id]">
+            <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/projetos%2F{{projeto.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" />
+            <h3>{{projeto.titulo}}</h3>
+            <p>{{projeto.descCurta}}</p>
+        </a>
+        <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn" *ngIf="user.id == perfilId">
+            <i class="ion-gear-a"></i>Editar Prjeto</a> -->
+
+
+
+            <div class="container-fluid">
+                <div class="container container-pad" id="property-listings">
+
+                    <div style="margin-left: -45" class="col-sm-10 col-md-12">
+
+                        <!-- Begin Listing: 609 W GRAVERS LN-->
+                        <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+
+                            <div class="media">
+                                <a class="pull-left" [routerLink]="['/projeto-detalhes/', projeto.id]" target="_parent">
+                                    <img alt="image" class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/projetos%2F{{projeto.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1">
+                                </a>
+
+                                <div class="media-body fnt-smaller">
+                                    <a href="#" target="_parent"></a>
+
+                                    <h4 style="margin-bottom: 15px" class="media-heading">{{projeto.titulo}}</h4>
+
+                                    <p class="hidden-xs">{{projeto.descCurta}}</p>
+                                </div>
+                            </div>
+                            <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn" *ngIf="user.id == perfilId">
+                                <i class="glyphicon glyphicon-cog"></i>Editar Projeto</a>
+                            <div class="post-footer-option">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a>
+                                            <i class="glyphicon glyphicon-eye-open"></i> Views -
+                                            <strong>23222</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <i class="glyphicon glyphicon-comment"></i> Comentários
+                                            <strong>0</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <i class="glyphicon glyphicon-user"></i> Colaboradores -
+                                            <strong>1</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

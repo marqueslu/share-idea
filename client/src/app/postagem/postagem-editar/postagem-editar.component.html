@@ -1,0 +1,28 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="close()">&times;</button>
+                <h4 class="modal-title">{{title}}</h4>
+            </div>
+            <div class="modal-body">
+                <form novalidate (ngSubmit)="editarPostagem()" [formGroup]="postagemForm">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea',
+                    menubar: false,
+                    toolbar: false,
+                    branding: false}" formControlName="conteudo"></editor>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <button class="btn btn-success" id="Editar" type="submit" (click)="editarPostagem()" [disabled]='!postagemForm.valid'>Alterar</button>
+                </span>
+                <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
