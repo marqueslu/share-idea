@@ -17,7 +17,7 @@
                     <strong>{{postagens.length}}</strong>
                 </p>
                 <br>
-                <p style="font-family: Comic Sans MS; font-size: 14px">{{perfil.sobre}}</p>
+                <p style="font-family: Comic Sans MS; font-size: 14px; color:#696969">{{perfil.sobre}}</p>
 
                 <div tyle="float:right" *ngIf="user.id !== perfilId && seguidorExistente === null">
                     <button class="btn btn-primary" (click)="seguir()">
@@ -38,9 +38,7 @@
 
     <ngui-tab>
         <div class="container">
-            <div class="row">
-                <h3>Conteúdos</h3>
-
+            <div class="row row-contents-perfil">
                 <div class="tabbable-panel">
                     <div class="tabbable-line">
                         <ul class="nav nav-tabs">
@@ -103,8 +101,8 @@
                                                                 <p class="hidden-xs">{{projeto.descCurta}}</p>
                                                             </div>
                                                         </div>
-                                                        <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn" *ngIf="user.id == perfilId">
-                                                            <i *ngIf="user.id === perfilId" class="glyphicon glyphicon-cog"></i>Editar Prjeto</a>
+                                                        <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn editar-projeto-perfil" *ngIf="user.id == perfilId">
+                                                            <i *ngIf="user.id === perfilId" class="glyphicon glyphicon-cog"></i>Editar Projeto</a>
                                                         <div class="post-footer-option">
                                                             <ul class="list-unstyled">
                                                                 <li>
