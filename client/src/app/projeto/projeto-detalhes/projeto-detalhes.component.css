@@ -134,3 +134,8 @@ body .no-padding {
 .status-upload form button>i {
     margin-right: 7px;
 }
+
+textarea {
+    max-width: 100%;
+}
+

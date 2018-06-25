@@ -2,8 +2,9 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #eee !important;
+    /* background: #eee !important; */
 }
+
 
 .btn-primary:hover,
 .btn-primary:focus {
