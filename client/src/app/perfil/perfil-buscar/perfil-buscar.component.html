@@ -16,12 +16,11 @@
                                     <div class="card-body text-center">
                                         <a [routerLink]="['/perfil/', perfil.id]">
                                             <p>
-                                                <img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{perfil.id}}?alt=media&token=cca15944-7daa-42e2-a7fc-84c0da1c25d6"
-                                                    alt="card image">
+                                                <img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{perfil.id}}?alt=media&token=cca15944-7daa-42e2-a7fc-84c0da1c25d6" alt="card image">
                                             </p>
                                             <h4 class="card-title">{{perfil.nome}} {{perfil.sobrenome}}</h4>
                                         </a>
-                                        <p class="card-text">Microsoft MVP | Software Engineer</p>
+                                        <p class="card-text">{{perfil.profissao}}</p>
                                         <a href="#" class="btn btn-primary btn-sm">Seguir</a>
                                     </div>
                                 </div>
