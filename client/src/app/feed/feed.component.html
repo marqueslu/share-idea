@@ -8,7 +8,8 @@
                         <!-- SIDEBAR USERPIC -->
                         <a [routerLink]="['/perfil/', perfil.id]">
                             <div class="profile-userpic">
-                                <img style="margin-top: 10px;" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{user.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" class="img-responsive" alt="">
+                                <img style="margin-top: 10px;" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{user.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1"
+                                    class="img-responsive" alt="">
                             </div>
                             <!-- END SIDEBAR USERPIC -->
                             <!-- SIDEBAR USER TITLE -->
@@ -22,12 +23,22 @@
                             </div>
                         </a>
                         <hr/>
-                        <p>Postagens
-                            <strong>{{postagensUsuario.length}}</strong></p>
+                        <p>Postagens</p>
+
+
+                        <p>
+                            <strong>{{postagensUsuario.length}}</strong>
+                        </p>
                         <hr/>
-                        <p>Projetos: <strong>{{projetosUsuario.length}}</strong></p>
+                        <p>Projetos</p>
+                        <p>
+                            <strong>{{projetosUsuario.length}}</strong>
+                        </p>
                         <hr/>
-                        <p>Seguidores: <strong>{{seguidoresUsuario.length}}</strong></p>
+                        <p>Seguidores </p>
+                        <p>
+                            <strong>{{seguidoresUsuario.length}}</strong>
+                        </p>
 
                     </div>
 
@@ -37,9 +48,10 @@
                         <app-postagem-criar></app-postagem-criar>
                         <div *ngFor='let postagem of postagens'>
                             <div class="feed-noticias" style="margin-bottom: 10px; margin-top:10px;">
-                                <div class="feed-noticias-postagens ">
+                                <div class="feed-noticias-postagens">
                                     <a [routerLink]="[ '/perfil/', postagem.usuarioId] ">
-                                        <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{postagem.usuarioId}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1 " />
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/perfil%2F{{postagem.usuarioId}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1 "
+                                        />
                                         <b>{{postagem.nome}} {{postagem.sobrenome}}</b>
                                         <br>
                                         <br>
