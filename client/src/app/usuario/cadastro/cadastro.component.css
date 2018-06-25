@@ -29,8 +29,13 @@
     height: 100vh;
 }
 
-.info-container h1{
+.info-container h1 img{
     margin-bottom: 10em;
+}
+img{
+    margin-bottom: 15em;
+    padding-bottom: 30px;
+    margin-top: 15px;
 }
 .button-login a{
     float: right;

@@ -32,6 +32,12 @@
 .info-container h1{
     margin-bottom: 10em;
 }
+
+img{
+    margin-bottom: 15em;
+    padding-bottom: 30px;
+    margin-top: 15px;
+}
 .button-login a{
     float: right;
     border: 2px solid #676CFB;
