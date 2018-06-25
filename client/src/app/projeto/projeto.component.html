@@ -12,10 +12,10 @@
 
 
 
-            <div class="container-fluid">
-                <div class="container container-pad" id="property-listings">
+            <!-- <div class="container-fluid"> -->
+                <div class="container-pad" id="property-listings">
 
-                    <div style="margin-left: -45" class="col-sm-10 col-md-12">
+                    <div class="">
 
                         <!-- Begin Listing: 609 W GRAVERS LN-->
                         <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
@@ -33,7 +33,7 @@
                                     <p class="hidden-xs">{{projeto.descCurta}}</p>
                                 </div>
                             </div>
-                            <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn" *ngIf="user.id == perfilId">
+                            <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn projeto-editar" *ngIf="user.id == perfilId">
                                 <i class="glyphicon glyphicon-cog"></i>Editar Projeto</a>
                             <div class="post-footer-option">
                                 <ul class="list-unstyled">
@@ -59,7 +59,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    <!-- </div> -->
 
                 </div>
             </div>
