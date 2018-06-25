@@ -1,29 +1,31 @@
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" (click)="close()">&times;</button>
-            <h4 class="modal-title">{{title}}</h4>
-        </div>
-        <div class="modal-body">
-            <form novalidate (ngSubmit)="editarPostagem()" [formGroup]="postagemForm">
-                <div class="form-group">
+<div class="modal fade" id="myModal"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="close()" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{title}}</h4>
+            </div>
+            <div class="modal-body">
+                <form novalidate (ngSubmit)="editarPostagem()" [formGroup]="postagemForm">
                     <div class="form-group">
-                        <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea',
+                        <div class="form-group">
+                            <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea',
                     menubar: false,
                     toolbar: false,
                     branding: false}" formControlName="conteudo"></editor>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <span>
-                <button class="btn btn-success" id="Editar" type="submit" (click)="editarPostagem()" [disabled]='!postagemForm.valid'>Alterar</button>
-            </span>
-            <span>
-                <button class="btn btn-danger" id="Excluir" type="submit" (click)="excluirPostagem()">Excluir</button>
-            </span>
-            <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <button class="btn btn-success" id="Editar" type="submit" (click)="editarPostagem()" [disabled]='!postagemForm.valid' data-dismiss="modal">Alterar</button>
+                </span>
+                <span>
+                    <button class="btn btn-danger" id="Excluir" type="submit" (click)="excluirPostagem()" data-dismiss="modal">Excluir</button>
+                </span>
+                <button type="button" class="btn btn-default" (click)="close()" data-dismiss="modal">Cancel</button>
+            </div>
         </div>
     </div>
 </div>

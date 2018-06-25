@@ -11,7 +11,7 @@
 
             <p style="float:right">{{postagem.dataPostagem | date: 'dd/MM/yyyy'}}</p>
             <p>
-                <a (click)='editar(postagem)' class="btn btn-sm btn-outline-secondary" *ngIf="id == perfilId">
+                <a (click)='editar(postagem)' class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#myModal" *ngIf="id == perfilId">
                     <i class="ion-edit"></i>Editar</a>
             </p>
         </div>
