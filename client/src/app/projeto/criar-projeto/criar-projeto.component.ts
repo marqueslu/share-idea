@@ -75,34 +75,21 @@ export class CriarProjetoComponent implements OnInit {
 
       p.usuarioId = user.id;
       
-      const file = p.fotoProjeto.file;
-
-        
-      const storeageRef : firebase.storage.Reference =  firebase.storage().ref().child('/projetos/' + "IMG");
-
-      storeageRef.put(file);
-
       this.projetoService.criarProjeto(p)
         .subscribe(
         result => { this.onSave(result)},
         error => { this.onError(error) }
         );
-
-
-
-      
-
-        
     }
   }
 
   
-  // uploadFoto(event: any) {
-  //   const file: File = event.target.files[0];
-  //   const metaData = { 'contentType': file.type };
-  //   const storeageRef: firebase.storage.Reference = firebase.storage().ref().child('/projetos/' + this.projeto.id);
-  //   storeageRef.put(file, metaData);
-  // }
+   uploadFoto(event: any) {
+     const file: File = event.target.files[0];
+     const metaData = { 'contentType': file.type };
+    const storeageRef: firebase.storage.Reference = firebase.storage().ref().child('/projetos/' + this.projeto.id);
+    storeageRef.put(file, metaData);
+   }
 
 
   onSave(response) {
