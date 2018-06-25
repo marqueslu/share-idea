@@ -57,4 +57,11 @@ export class PostagemService extends BaseService {
             .map((res: Response) => <Postagem[]>res.json())
             .catch(super.serviceError);
     }
+
+    excluirPostagem(id : string){
+        return this.http
+        .delete(this.UrlServiceV1 + "postagens/" + id, super.HeaderAutenticado())
+        .map((res: Response) => <Postagem[]>res.json())
+        .catch(super.serviceError);
+    }
 }

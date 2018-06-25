@@ -2,7 +2,7 @@
 
 <div class="container" style="margin-bottom: 100px">
     <div class="row">
-        <button style="margin-bottom: 20px; margin-left: 16px" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+        <button style="margin-bottom: 20px; margin-left: 16px; width:150px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
                         Dicas
                     </button>
     </div>
@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- Modal -->
@@ -52,7 +53,7 @@
 
             <div class="form-group" [ngClass]="{'has-error': displayMessage.titulo }">
 
-                <div class="col-md-3">
+                <div class="col-md-12">
 
                     <input class="form-control" id="titulo" type="text" placeholder="Titulo" formControlName="titulo" required />
 
@@ -64,7 +65,7 @@
 
 
             <div class="form-group" [ngClass]="{'has-error': displayMessage.descCurta }">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <textarea style="resize: none; height: 200px;" class="form-control" id="descCurta" type="text" placeholder="Descrição curta" formControlName="descCurta" required></textarea>
                     <span class="text-danger" *ngIf="displayMessage.descCurta">
                         <p [innerHTML]="displayMessage.descCurta"></p>
@@ -74,7 +75,7 @@
 
             <div class="form-group" [ngClass]="{'has-error': displayMessage.nome }">
                 <div class="col-md-3">
-                     <input class="form-control" (change)="uploadFoto($event)" id="fotoProjeto" type="file" /> 
+                    <input class="form-control" (change)="uploadFoto($event)" id="fotoProjeto" type="file" />
                 </div>
             </div>
 
@@ -82,7 +83,7 @@
                 <editor apiKey="rzr3xwq6iqg4n85bj4kh948jmfn44nh38ctc7blchinlj4nm" [init]="{selector: 'textarea ',
                     plugins: 'media mediaembed',
                     mediaembed_service_url: 'SERVICE_URL',
-                    mediaembed_max_width: 450}" class="col-md-12" formControlName="conteudo">
+                    mediaembed_max_width: 45}" class="col-md-12" formControlName="conteudo">
                 </editor>
             </div>
 

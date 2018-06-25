@@ -9,7 +9,7 @@ import { InterceptorService } from "ng2-interceptors";
 @Injectable()
 export class ProjetoService extends BaseService {
 
-    constructor(private http:  InterceptorService) { super(); }
+    constructor(private http: InterceptorService) { super(); }
 
     public obterUsuario() {
         return JSON.parse(localStorage.getItem('rsc.user'));
@@ -27,7 +27,7 @@ export class ProjetoService extends BaseService {
         return response;
     };
 
-    
+
     atualizarProjeto(projeto: Projeto): Observable<Projeto> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
@@ -49,7 +49,7 @@ export class ProjetoService extends BaseService {
     }
 
     obterProjeto(id: string): Observable<Projeto> {
-        
+
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
@@ -57,5 +57,16 @@ export class ProjetoService extends BaseService {
             .get(this.UrlServiceV1 + "projetos/obterProjeto/" + id, super.HeaderAutenticado())
             .map((res: Response) => <Projeto>res.json())
             .catch(super.serviceError);
+    }
+
+    excluirProejto(id: string) {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        
+        let response = this.http
+            .delete(this.UrlServiceV1 + "projetos/" + id, super.HeaderAutenticado())
+            .map(super.extractData)
+            .catch((super.serviceError));
+        return response;
     }
 }

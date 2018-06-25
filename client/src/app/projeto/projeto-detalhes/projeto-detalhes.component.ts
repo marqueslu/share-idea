@@ -56,8 +56,17 @@ export class ProjetoDetalhesComponent implements OnInit {
       error => { this.onError(error) };
   }
 
+  excluirProjeto(){
+    this.projetoService.excluirProejto(this.projetoId)
+        .subscribe(
+        result => { this.onSave(result)},
+        error => { this.onError(error) }
+        );
+  }
+
   onSave(response) {
     this.errors = [];
+    this.router.navigate(['/projetos/'+this.user.id])
   }
   onError(error) {
     this.errors = JSON.parse(error._body).erros;

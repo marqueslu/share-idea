@@ -92,7 +92,7 @@ export class PostagemEditarComponent extends DialogComponent<dtoPostagemModal, b
       this.postagemService.editar(p)
         .subscribe(
           result => { 
-            this.onSave();
+            this.onSave("alterada");
             
            },
           error => {
@@ -102,8 +102,20 @@ export class PostagemEditarComponent extends DialogComponent<dtoPostagemModal, b
     }
   }
 
-  onSave() {
-    this.mensagem.success("Postagem","Postagem alterada com sucesso!");
+  excluirPostagem(){
+    this.postagemService.excluirPostagem(this.postagemId)
+    .subscribe(
+      result => { 
+        this.onSave("excluida");
+        
+       },
+      error => {
+        this.errors = JSON.parse(error._body).errors;
+      });
+  }
+
+  onSave(msg:string) {
+    this.mensagem.success("Postagem","Postagem "+msg+" com sucesso!");
     this.errors = [];
     this.result = true;
     this.close();

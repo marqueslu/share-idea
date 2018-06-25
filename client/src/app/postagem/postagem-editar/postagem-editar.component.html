@@ -20,6 +20,9 @@
             <span>
                 <button class="btn btn-success" id="Editar" type="submit" (click)="editarPostagem()" [disabled]='!postagemForm.valid'>Alterar</button>
             </span>
+            <span>
+                <button class="btn btn-danger" id="Excluir" type="submit" (click)="excluirPostagem()">Excluir</button>
+            </span>
             <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
         </div>
     </div>

@@ -10,7 +10,7 @@ import 'rxjs/add/observable/throw';
 export abstract class BaseService {
 
     protected UrlServiceV1: string = "https://rede-social-api-tcc.azurewebsites.net/api/v1/";
-    // protected UrlServiceV1: string = "http://localhost:59584/api/v1/";
+    //protected UrlServiceV1: string = "http://localhost:59584/api/v1/";
 
     public Token: string = "";
 

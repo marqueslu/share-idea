@@ -87,6 +87,7 @@ a {
 @media only screen and (min-width: 992px) {
     #property-listings .property-listing img {
         max-width: 300px;
+        max-height: 300px;
     }
 }
 

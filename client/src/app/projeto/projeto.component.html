@@ -11,15 +11,6 @@
         <div *ngFor='let projeto of projetos'>
 
 
-            <!-- <a [routerLink]="['/projeto-detalhes/', projeto.id]">
-            <img src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/projetos%2F{{projeto.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" />
-            <h3>{{projeto.titulo}}</h3>
-            <p>{{projeto.descCurta}}</p>
-        </a>
-        <a [routerLink]="['/projeto-editar/', projeto.id]" class="btn btn-sm btn-outline-secondary action-btn" *ngIf="user.id == perfilId">
-            <i class="ion-gear-a"></i>Editar Prjeto</a> -->
-
-
 
             <div class="container-fluid">
                 <div class="container container-pad" id="property-listings">
@@ -31,7 +22,7 @@
 
                             <div class="media">
                                 <a class="pull-left" [routerLink]="['/projeto-detalhes/', projeto.id]" target="_parent">
-                                    <img alt="image" class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/projetos%2F{{projeto.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1">
+                                    <img alt="image" src="https://firebasestorage.googleapis.com/v0/b/redesocialtcc-46645.appspot.com/o/projetos%2F{{projeto.id}}?alt=media&token=4bb86929-ef2c-4608-bb98-c3c3346c57d1" width="300px" height="200px">
                                 </a>
 
                                 <div class="media-body fnt-smaller">

@@ -7,4 +7,5 @@ export class Projeto {
     usuarioId: string;
     ativo: boolean;
     projetoExistente: boolean;
+    dataCriacao: Date;
 }
